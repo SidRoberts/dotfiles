@@ -10,7 +10,7 @@ esac
 shopt -s histappend
 
 # Don't put duplicate lines into the history
-export HISTCONTROL=ignoreups
+export HISTCONTROL=ignoredups
 
 # Increase history size from 500 to 1000 command
 export HISTSIZE=1000
