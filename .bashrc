@@ -120,16 +120,16 @@ fi
 
 # Set LS_COLORS environment by Deepin
 if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
-    eval $(dircolors -b /etc/lscolor-256color)
+    eval "$(dircolors -b /etc/lscolor-256color)"
 else
-    eval $(dircolors)
+    eval "$(dircolors)"
 fi
 
 
 
 # Make less more friendly for non-text input files
 if [ -x /usr/bin/lesspipe ]; then
-    eval $(lesspipe)
+    eval "$(lesspipe)"
 fi
 
 
