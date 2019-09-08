@@ -1,10 +1,10 @@
 [user]
-	name       = Sid Roberts
-	email      = sid@sidroberts.co.uk
+    name       = Sid Roberts
+    email      = sid@sidroberts.co.uk
     signingkey = CED5CF984C10504A
 
 [core]
     editor = nano
 
 [commit]
-        gpgsign = true
+    gpgsign = true
