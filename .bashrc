@@ -129,3 +129,8 @@ export EDITOR=nano
 if [ -d ~/.config/composer/vendor/bin ]; then
     export PATH=~/.config/composer/vendor/bin:$PATH
 fi
+
+# Add user bin to PATH
+if [ -d ~/bin ]; then
+    export PATH=~/bin:$PATH
+fi
