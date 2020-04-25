@@ -1,7 +1,7 @@
 [user]
     name       = Sid Roberts
     email      = sid@sidroberts.co.uk
-    signingkey = CED5CF984C10504A
+    signingkey = CFC41CD4862303B9
 
 [core]
     editor = nano
