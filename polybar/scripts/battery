@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+from subprocess import check_output
+
+battery = check_output(["acpi", "-b"], universal_newlines=True)
+
+if not battery:
+    print("BATTERY NOT FOUND")
+    exit(0)
+
+battery = battery.rstrip("\n")
+
+# Remove name
+battery = battery.split(": ")[1]
+
+battery = battery.split(", ")
+
+state = battery[0]
+
+if state == "Unknown":
+    print("BATTERY STATE UNKNOWN")
+    exit(0)
+
+percent = int(battery[1].rstrip("%"))
+
+if state == "Full":
+    icon = "\uf1e6" # Plug symbol
+elif state == "Charging":
+    icon = "\uf0e7" # Lightning symbol
+elif percent > 80:
+    icon = "\uf240" # Full battery symbol
+elif percent > 60:
+    icon = "\uf241" # 3/4 full battery symbol
+elif percent > 40:
+    icon = "\uf242" # 1/2 full battery symbol
+elif percent > 20:
+    icon = "\uf243" # 1/4 full battery symbol
+else:
+    icon = "\uf244" # Empty battery symbol
+
+print("{} {}%".format(icon, percent))

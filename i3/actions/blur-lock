@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# If something is playing then don't suspend
+if [[ $(playerctl status) == "Playing" ]]; then
+    exit
+fi
+
+picture=/tmp/i3lock.png
+blur="8x5"
+
+scrot -z $picture
+
+convert $picture \
+	-blur $blur \
+	-font /usr/share/fonts/noto/NotoSans-Regular.ttf \
+	-undercolor black \
+	-fill white \
+	-pointsize 60 \
+	-gravity center \
+	-draw "text 0,300 'Computer is locked.'" \
+	$picture
+
+i3lock -i $picture -f -e
+
+rm $picture

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+status=$(playerctl status 2> /dev/null)
+
+if [[ $? != 0 || "$status" != "Playing" ]]; then
+    echo ""
+    exit 0
+fi
+
+artist=$(playerctl metadata artist -s)
+title=$(playerctl metadata title -s)
+
+# Truncate long artist names
+if [ ${#artist} -ge 40 ]; then
+    artist="${artist:0:40}..."
+fi
+
+# Truncate long titles
+if [ ${#title} -ge 40 ]; then
+    title="${title:0:40}..."
+fi
+
+if [[ -z "$artist" ]]; then
+    output="${title}"
+else
+    output="${artist} - ${title}"
+fi
+
+# Uppercase
+output="${output^^}"
+
+echo " ${output}"

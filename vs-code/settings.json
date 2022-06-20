@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "'Fira Code Retina', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontFamily": "'Fira Code Light'",
+    "terminal.integrated.lineHeight": 1.3,
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Quiet Light"
+}

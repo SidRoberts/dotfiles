@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Fancy application menu
+rofi -modi drun -show drun -config ~/.config/rofi/nord.rasi

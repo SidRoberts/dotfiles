@@ -1,0 +1,5 @@
+alias grep='grep --color=auto'
+
+alias ls='ls --color=auto'
+alias ll='ls -lav --ignore=..' # Show long listing of everything except ".."
+alias l='ls -lav --ignore=.?*' # Show long listing but no hidden dotfiles except "."

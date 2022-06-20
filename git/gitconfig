@@ -1,0 +1,24 @@
+[user]
+    name       = Sid Roberts
+    email      = sid@sidroberts.co.uk
+    signingkey = EF4E7E3A3103DD47
+
+[core]
+    editor = nano
+
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = development
+
+[checkout]
+    defaultRemote = origin
+
+[alias]
+    aliases  = !git config --list | grep ^alias\\. | cut -c 7- | sort -k 1
+    amend    = commit --amend
+    branches = branch --all
+    count    = shortlog --summary --numbered
+    remotes  = remote --verbose
+    tags     = tag -l

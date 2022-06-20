@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+output=$(xbacklight -get | cut -d '.' -f 1)
+
+echo " ${output}%"

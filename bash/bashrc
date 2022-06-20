@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+
+
+# The pattern "**" used in a pathname expansion context will match all files and
+# zero or more directories and subdirectories
+shopt -s globstar
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Don't put duplicate lines into the history
+export HISTCONTROL=ignoredups
+
+
+
+# Colours
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+blue=$(tput setaf 104)
+bold=$(tput bold)
+reset=$(tput sgr0)
+
+PS1="\[\$blue\$bold\]\w\[\$reset\] \$ "
+
+
+
+# Alias definitions
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
+
+
+[[ "$(whoami)" = "root" ]] && return
+
+[[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
+
+## Use the up and down arrow keys for finding a command in history
+## (you can write some initial letters of the command first).
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+
+
+# Add Composer global vendor to PATH
+if [ -d ~/.config/composer/vendor/bin ]; then
+    export PATH=~/.config/composer/vendor/bin:$PATH
+fi
+
+# Add user bin to PATH
+if [ -d ~/bin ]; then
+    export PATH=~/bin:$PATH
+fi

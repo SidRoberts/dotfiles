@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# If something is playing then don't suspend
+if [[ $(playerctl status) == "Playing" ]]; then
+    exit
+fi
+
+systemctl suspend

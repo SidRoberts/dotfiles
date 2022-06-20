@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+xbacklight $1
+
+notify-send -u low "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"

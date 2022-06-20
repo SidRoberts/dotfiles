@@ -1,0 +1,300 @@
+font pango: Noto Sans Regular 12
+
+# Set the mod key to the Windows key
+set $mod Mod4
+
+
+
+####################
+# Workspace layout #
+####################
+
+workspace_layout default
+
+
+
+#############################
+# Extra options for windows #
+#############################
+
+# Border indicator on windows
+new_window pixel 1
+
+gaps inner 15
+gaps outer 0
+
+title_align center
+
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+
+
+#########################
+# Workspace keybindings #
+#########################
+
+# Navigate between workspaces
+bindsym $mod+Tab       workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+
+
+
+###########################
+# i3-specific keybindings #
+###########################
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Reload the i3 configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# Change focus
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+# Split in horizontal orientation
+bindsym $mod+h split h
+
+# Split in vertical orientation
+bindsym $mod+v split v
+
+# Enter/exit fullscreen mode
+bindsym $mod+f fullscreen toggle
+
+# Change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+g layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle between tiling and floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling and floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+
+
+######################
+# Action keybindings #
+######################
+
+bindsym Print exec ~/.config/i3/actions/screenshot
+
+# Lock the system
+bindsym $mod+l exec ~/.config/i3/actions/blur-lock
+
+# Backlight control
+bindsym XF86MonBrightnessUp   exec ~/.config/i3/actions/backlight +10 && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessDown exec ~/.config/i3/actions/backlight -10 && pkill -RTMIN+1 i3blocks
+
+
+
+#########################
+# Rofi menu keybindings #
+#########################
+
+bindsym $mod+Shift+e exec ~/.config/i3/actions/power-menu
+
+bindsym $mod+d exec ~/.config/i3/actions/applications-menu
+
+bindsym $mod+t exec ~/.config/i3/actions/windows-menu
+
+bindsym $mod+c exec ~/.config/i3/actions/clipboard-manager
+
+
+
+##########################
+# Multimedia keybindings #
+##########################
+
+# Volume controls
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/actions/volume-adjust 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec ~/.config/i3/actions/volume-adjust 5%- && pkill -RTMIN+1 i3blocks
+
+# Mute
+bindsym XF86AudioMute exec ~/.config/i3/actions/volume-mute && pkill -RTMIN+1 i3blocks
+
+# Audio controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+
+#################
+# App shortcuts #
+#################
+
+bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+w      exec /usr/bin/google-chrome-stable
+bindsym $mod+n      exec /usr/bin/thunar
+
+
+
+#######################
+# Workspace behaviour #
+#######################
+
+# Workspace names
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+# Bind apps to specific workspaces
+assign [class="Xfce4-terminal"]    $ws1
+assign [class="(?i)google-chrome"] $ws2
+assign [class="Thunar"]            $ws3
+assign [class="code"]              $ws4
+
+assign [title="Welcome to Google Chrome"] $ws2
+
+# Anything that opens should be focused on
+for_window [class=".*"] focus
+
+
+
+##############
+# Compositor #
+##############
+
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+
+
+
+###########
+# Polybar #
+###########
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+
+
+######################
+# Autostart services #
+######################
+
+# Start an authentication agent to get a password prompt when applications require certain root privileges
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Start XDG autostart .desktop files using dex
+exec --no-startup-id dex --autostart --environment i3
+
+# Set wallpaper
+exec --no-startup-id nitrogen --restore
+
+# Clipboard manager
+exec --no-startup-id greenclip daemon > /dev/null
+
+# Use xautolock to lock the screen after 1 minute
+#exec --no-startup-id xautolock -time 1 -locker "~/.config/i3/actions/blur-lock"
+
+# Use xautolock to suspend after 10 minutes
+exec --no-startup-id xautolock -time 10 -detectsleep -locker "~/.config/i3/actions/suspend"
+
+# Desktop notifications
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+
+# Projecteur - for Logitech Spotlight
+exec --no-startup-id projecteur
+
+
+
+##################
+# Autostart apps #
+##################
+
+exec --no-startup-id sleep 1 && xfce4-terminal
+exec --no-startup-id sleep 1 && google-chrome-stable
+exec --no-startup-id sleep 1 && thunar
+exec --no-startup-id sleep 1 && code
+
+
+
+##################
+# Floating rules #
+##################
+
+for_window [class="Yad" instance="yad"]                 floating enable
+for_window [class="Galculator" instance="galculator"]   floating enable
+for_window [class="Xsane" instance="xsane"]             floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [window_role="About"]                        floating enable
+for_window [class="pentablet"]                          floating enable
+
+floating_maximum_size 1600 x 900
+
+# Float windows in the center of the screen
+for_window [class=".*"] move position center
+
+
+
+##################
+# Color settings #
+##################
+
+set $nord0  #2E3440
+set $nord1  #3B4252
+set $nord2  #434C5E
+set $nord3  #4C566A
+set $nord4  #D8DEE9
+set $nord5  #E5E9F0
+set $nord6  #ECEFF4
+set $nord7  #8FBCBB
+set $nord8  #88C0D0
+set $nord9  #81A1C1
+set $nord10 #5E81AC
+set $nord11 #BF616A
+set $nord12 #D08770
+set $nord13 #EBCB8B
+set $nord14 #A3BE8C
+set $nord15 #B48EAD
+
+#class                  border  bg      text   indicator  child_border
+client.focused          $nord1  $nord1  $nord4 $nord1     $nord1
+client.unfocused        $nord6  $nord6  $nord1 $nord6     $nord6
+client.focused_inactive $nord6  $nord6  $nord1 $nord6     $nord6
+client.urgent           $nord11 $nord11 $nord6 $nord11    $nord11

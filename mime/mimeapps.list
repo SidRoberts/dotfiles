@@ -1,0 +1,17 @@
+[Default Applications]
+application/pdf=google-chrome.desktop
+audio/flac=mpv.desktop
+audio/mpeg=mpv.desktop
+image/gif=google-chrome.desktop
+image/jpeg=google-chrome.desktop
+image/png=google-chrome.desktop
+text/html=google-chrome.desktop
+video/x-matroska=mpv.desktop
+video/mp4=mpv.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/mailto=google-chrome.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/webcal=google-chrome.desktop

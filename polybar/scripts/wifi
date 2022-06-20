@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+ssid="$(iwgetid -r)"
+
+if [ $? -eq 255 ]; then
+    echo "NOT CONNECTED"
+    exit 33
+fi
+
+# Truncate long SSIDs
+if [ ${#ssid} -ge 40 ]; then
+    title="${ssid:0:40}..."
+fi
+
+# Uppercase
+ssid="${ssid^^}"
+
+echo " ${ssid}"
