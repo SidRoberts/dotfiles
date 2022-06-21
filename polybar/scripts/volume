@@ -3,7 +3,7 @@
 output=$(amixer get Master)
 
 if [[ "$output" == *"[off]"* ]]; then
-   echo " MUTED"
+   echo "%{F#EBCB8B} MUTED%{F-}"
    exit 0
 fi
 

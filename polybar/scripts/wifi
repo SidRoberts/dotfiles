@@ -3,7 +3,7 @@
 ssid="$(iwgetid -r)"
 
 if [ $? -eq 255 ]; then
-    echo "NOT CONNECTED"
+    echo "%{F#BF616A}NOT CONNECTED%{F-}"
     exit 33
 fi
 
