@@ -117,7 +117,7 @@ sudo pacman -S xautolock --noconfirm --needed
 # i3 #
 ######
 
-sudo pacman -S i3-gaps i3status i3blocks i3lock --noconfirm --needed
+sudo pacman -S i3-gaps i3lock --noconfirm --needed
 
 mkdir -p ~/.config/i3/
 
