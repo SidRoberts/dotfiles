@@ -2,10 +2,16 @@
 
 from subprocess import check_output
 
+def error(message):
+    return "%{F#BF616A}" + message + "%{F-}"
+
+def warning(message):
+    return "%{F#EBCB8B}" + message + "%{F-}"
+
 battery = check_output(["acpi", "-b"], universal_newlines=True)
 
 if not battery:
-    print("%{F#BF616A}BATTERY NOT FOUND%{F-}")
+    print(error("BATTERY NOT FOUND"))
     exit(0)
 
 battery = battery.rstrip("\n")
@@ -18,7 +24,7 @@ battery = battery.split(", ")
 state = battery[0]
 
 if state == "Unknown":
-    print("%{F#BF616A}BATTERY STATE UNKNOWN%{F-}")
+    print(error("BATTERY STATE UNKNOWN"))
     exit(0)
 
 percent = int(battery[1].rstrip("%"))
@@ -41,6 +47,8 @@ else:
 output = "{} {}%".format(icon, percent)
 
 if percent < 10:
-    output = "%{F#BF616A}" + output + "%{F-}"
+    output = error(output)
+elif percent < 20:
+    output = warning(output)
 
 print(output)
