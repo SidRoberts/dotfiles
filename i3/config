@@ -241,6 +241,9 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 # Projecteur - for Logitech Spotlight
 exec --no-startup-id projecteur
 
+# Set natural scrolling for trackpad
+exec --no-startup-id xinput set-prop 'CyPS/2 Cypress Trackpad' 311 1
+
 
 
 ##################
