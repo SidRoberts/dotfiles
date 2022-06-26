@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Hide when within a VM
+if [ -e /dev/vboxguest ]; then
+    exit 0
+fi
+
 output=$(xbacklight -get | cut -d '.' -f 1)
 
 echo " ${output}%"

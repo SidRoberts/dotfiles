@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Hide when within a VM
+if [ -e /dev/vboxguest ]; then
+    exit 0
+fi
+
 ssid="$(iwgetid -r)"
 
 if [ $? -eq 255 ]; then
