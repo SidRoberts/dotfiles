@@ -517,6 +517,9 @@ fi
 
 sudo pacman -S code --noconfirm --needed
 
+mkdir -p "~/.config/Code - OSS/"
+mkdir -p "~/.config/Code - OSS/User/"
+
 cp vs-code/Preferences   "~/.config/Code - OSS/Preferences"
 cp vs-code/settings.json "~/.config/Code - OSS/User/settings.json"
 
