@@ -473,7 +473,7 @@ cp nano/nanorc ~/.nanorc
 # MIME types #
 ##############
 
-cp ${SCRIPT_DIR}/mime/mimetypes.list ~/.config/mimetypes.list
+cp ${SCRIPT_DIR}/mime/mimeapps.list ~/.config/mimeapps.list
 
 
 
