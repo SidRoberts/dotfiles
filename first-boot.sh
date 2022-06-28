@@ -543,6 +543,21 @@ cp projecteur/Projecteur.conf ~/.config/Projecteur/Projecteur.conf
 
 
 
+#################
+# Google Chrome #
+#################
+
+yay -S google-chrome --noconfirm --needed
+
+mkdir -p ~/.config/google-chrome/
+
+# Hide First Run welcome screen
+touch ~/.config/google-chrome/"First Run"
+
+xdg-settings set default-web-browser google-chrome.desktop
+
+
+
 ########
 # Misc #
 ########
@@ -560,8 +575,6 @@ sudo pacman -S transmission-gtk --noconfirm --needed
 sudo pacman -S gparted --noconfirm --needed
 
 sudo pacman -S scrot --noconfirm --needed
-
-yay -S google-chrome --noconfirm --needed
 
 yay -S postman-bin --noconfirm --needed
 
