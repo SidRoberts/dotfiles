@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Hide when within a VM
-if [ -e /dev/vboxguest ]; then
+if [ "$(systemd-detect-virt)" != "none" ]; then
     exit 0
 fi
 

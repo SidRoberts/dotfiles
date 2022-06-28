@@ -98,15 +98,15 @@ makepkg -si
 
 sudo pacman -S xorg xorg-xinit xterm --noconfirm --needed
 
-if [ -e /dev/vboxguest ]; then
-    sudo pacman -S xf86-video-vesa --noconfirm --needed
-else
+if [ "$(systemd-detect-virt)" = "none" ]; then
     sudo pacman -S xf86-video-intel mesa --noconfirm --needed
 
     sudo mkdir -p /etc/X11/xorg.conf.d/
 
     sudo cp ${SCRIPT_DIR}/xorg/20-intel.conf          /etc/X11/xorg.conf.d/20-intel.conf
     sudo cp ${SCRIPT_DIR}/xorg/20-intel-graphics.conf /etc/X11/xorg.conf.d/20-intel-graphics.conf
+else
+    sudo pacman -S xf86-video-vesa --noconfirm --needed
 fi
 
 sudo pacman -S xautolock --noconfirm --needed
