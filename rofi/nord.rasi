@@ -7,7 +7,7 @@ configuration {
     display-drun:        "App";
     drun-display-format: "{name}";
     scroll-method:       0;
-    disable-history:     false;
+    disable-history:     true;
     sidebar-mode:        false;
 }
 
