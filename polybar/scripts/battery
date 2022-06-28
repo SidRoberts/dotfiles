@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
 
 from subprocess import check_output
+from subprocess import run
 
 def error(message):
     return "%{F#BF616A}" + message + "%{F-}"
 
 def warning(message):
     return "%{F#EBCB8B}" + message + "%{F-}"
+
+virt_status = run(["systemd-detect-virt"], universal_newlines=True, check=False, capture_output=True).stdout
+
+virt_status = virt_status.rstrip("\n")
+
+if virt_status != "none":
+    exit(0)
 
 battery = check_output(["acpi", "-b"], universal_newlines=True)
 
