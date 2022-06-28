@@ -384,8 +384,15 @@ yay -S autotrash --noconfirm --needed
 mkdir -p ~/.local/share/Trash/{expunged,files,info}
 chmod -R 700 ~/.local/share/Trash/{expunged,files,info}
 
-# Empty trash after 14 days
-autotrash -d 14 --install
+# We're installing the systemd timer manually because autotrash's install exits with code 1.
+
+mkdir -p ~/.config/systemd/user/
+
+cp ${SCRIPT_DIR}/autotrash/autotrash.service ~/.config/systemd/user/
+cp ${SCRIPT_DIR}/autotrash/autotrash.timer   ~/.config/systemd/user/
+
+systemctl --user enable autotrash.timer
+systemctl --user start autotrash
 
 
 
@@ -409,7 +416,6 @@ sudo systemctl enable cups
 if grep -q "Laptop_Integrated_Webcam_1.3M" /sys/bus/usb/devices/1-1.5/product; then
     echo 0 | sudo tee /sys/bus/usb/devices/1-1.5/bConfigurationValue
 fi
-
 
 
 
