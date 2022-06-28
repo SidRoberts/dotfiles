@@ -18,7 +18,7 @@ workspace_layout default
 #############################
 
 # Border indicator on windows
-new_window pixel 1
+new_window pixel 0
 
 gaps inner 15
 gaps outer 0
