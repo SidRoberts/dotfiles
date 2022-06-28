@@ -13,7 +13,7 @@ menu=(
 
 menu_nrows=${#menu[@]}
 
-selection="$(printf '%s\n' "${!menu[@]}" | rofi -dmenu -i -lines "${menu_nrows}" -p '' -config ~/.config/rofi/nord.rasi)"
+selection="$(printf '%s\n' "${!menu[@]}" | rofi -dmenu -i -lines "${menu_nrows}" -p '' -config ~/.config/rofi/no-icons.rasi)"
 
 if [[ $? -eq 0 && ! -z ${selection} ]]; then
   i3-msg -q "exec ${menu[${selection}]}"

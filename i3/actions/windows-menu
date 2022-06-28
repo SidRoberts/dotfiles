@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rofi -show window -config ~/.config/rofi/nord.rasi
+rofi -show window -config ~/.config/rofi/icons.rasi

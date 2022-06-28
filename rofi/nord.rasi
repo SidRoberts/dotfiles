@@ -1,6 +1,5 @@
 configuration {
     font:                "Noto Sans Regular 14";
-    show-icons:          true;
     icon-theme:          "Qogir";
     display-clipboard:   "Clipboard";
     display-window:      "Window";
