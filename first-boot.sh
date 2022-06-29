@@ -573,6 +573,8 @@ xdg-settings set default-web-browser google-chrome.desktop
 
 sudo pacman -S acpi wireless_tools --noconfirm --needed
 
+sudo pacman -S dex --noconfirm --needed
+
 sudo pacman -S tldr --noconfirm --needed
 
 sudo pacman -S arandr --noconfirm --needed
