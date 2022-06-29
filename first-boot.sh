@@ -121,7 +121,7 @@ sudo pacman -S i3-gaps i3lock --noconfirm --needed
 
 mkdir -p ~/.config/i3/
 
-cp -r ${SCRIPT_DIR}/i3/. ~/.config/i3/
+cp -R ${SCRIPT_DIR}/i3/. ~/.config/i3/
 
 
 
@@ -177,7 +177,7 @@ cp ${SCRIPT_DIR}/thunar/thunar-volman.xml ~/.config/xfce4/xfconf/xfce-perchannel
 
 sudo pacman -S picom --noconfirm --needed
 
-cp -r ${SCRIPT_DIR}/picom/. ~/.config/picom/
+cp -R ${SCRIPT_DIR}/picom/. ~/.config/picom/
 
 
 
@@ -187,7 +187,7 @@ cp -r ${SCRIPT_DIR}/picom/. ~/.config/picom/
 
 sudo pacman -S nitrogen --noconfirm --needed
 
-cp -r ${SCRIPT_DIR}/nitrogen/. ~/.config/nitrogen/
+cp -R ${SCRIPT_DIR}/nitrogen/. ~/.config/nitrogen/
 
 backgrounds=(
     "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg"
@@ -214,7 +214,7 @@ sudo pacman -S rofi --noconfirm --needed
 
 mkdir -p ~/.config/rofi/
 
-cp -r ${SCRIPT_DIR}/rofi/. ~/.config/rofi/
+cp -R ${SCRIPT_DIR}/rofi/. ~/.config/rofi/
 
 
 
@@ -224,7 +224,7 @@ cp -r ${SCRIPT_DIR}/rofi/. ~/.config/rofi/
 
 sudo pacman -S dunst --noconfirm --needed
 
-cp -r ${SCRIPT_DIR}/dunst/. ~/.config/dunst/
+cp -R ${SCRIPT_DIR}/dunst/. ~/.config/dunst/
 
 
 
@@ -280,9 +280,9 @@ sudo pacman -S arc-gtk-theme --noconfirm --needed
 
 yay -S qogir-icon-theme --noconfirm --needed
 
-cp -r ${SCRIPT_DIR}/gtk/gtk-2.0/. ~/.config/gtk-2.0/
-cp -r ${SCRIPT_DIR}/gtk/gtk-3.0/. ~/.config/gtk-3.0/
-cp -r ${SCRIPT_DIR}/gtk/gtk-4.0/. ~/.config/gtk-4.0/
+cp -R ${SCRIPT_DIR}/gtk/gtk-2.0/. ~/.config/gtk-2.0/
+cp -R ${SCRIPT_DIR}/gtk/gtk-3.0/. ~/.config/gtk-3.0/
+cp -R ${SCRIPT_DIR}/gtk/gtk-4.0/. ~/.config/gtk-4.0/
 
 
 
@@ -611,7 +611,7 @@ cp ${SCRIPT_DIR}/ToDoList.md ~/
 # Copy scripts #
 ################
 
-cp -r ${SCRIPT_DIR}/scripts/. ~/Scripts/
+cp -R ${SCRIPT_DIR}/scripts/. ~/Scripts/
 
 
 
