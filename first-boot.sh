@@ -480,7 +480,7 @@ yay -S xp-pen-tablet  --noconfirm --needed
 
 sudo pacman -S nano nano-syntax-highlighting --noconfirm --needed
 
-cp nano/nanorc ~/.nanorc
+cp ${SCRIPT_DIR}/nano/nanorc ~/.nanorc
 
 
 
@@ -535,8 +535,8 @@ sudo pacman -S code --noconfirm --needed
 mkdir -p ~/.config/"Code - OSS"/
 mkdir -p ~/.config/"Code - OSS"/User/
 
-cp vs-code/Preferences   ~/.config/"Code - OSS"/Preferences
-cp vs-code/settings.json ~/.config/"Code - OSS"/User/settings.json
+cp ${SCRIPT_DIR}/vs-code/Preferences   ~/.config/"Code - OSS"/Preferences
+cp ${SCRIPT_DIR}/vs-code/settings.json ~/.config/"Code - OSS"/User/settings.json
 
 
 
@@ -548,7 +548,7 @@ yay -S projecteur-git --noconfirm --needed
 
 mkdir ~/.config/Projecteur
 
-cp projecteur/Projecteur.conf ~/.config/Projecteur/Projecteur.conf
+cp ${SCRIPT_DIR}/projecteur/Projecteur.conf ~/.config/Projecteur/Projecteur.conf
 
 
 
