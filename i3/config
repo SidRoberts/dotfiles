@@ -21,7 +21,7 @@ workspace_layout default
 new_window pixel 0
 
 gaps inner 15
-gaps outer 0
+gaps outer -15
 
 title_align center
 
