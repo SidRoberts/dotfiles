@@ -609,7 +609,7 @@ cp ${SCRIPT_DIR}/ToDoList.md ~/
 # Copy scripts #
 ################
 
-cp -r ${SCRIPT_DIR}/scripts/. ~/scripts/
+cp -r ${SCRIPT_DIR}/scripts/. ~/Scripts/
 
 
 
