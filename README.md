@@ -11,15 +11,15 @@ This script is designed to run on my *vintage* Dell XPS 13 (L322X, early 2013) a
 Boot into the Arch ISO image.
 
 ```bash
-curl https://sidroberts.co.uk/install.sh | bash
+curl -O https://sidroberts.co.uk/install.sh
 
-bash start.sh
+bash install.sh
 ```
 
 Reboot.
 
 ```bash
-curl https://sidroberts.co.uk/install.sh | bash
+cd arch-install-script/
 
 bash first-boot.sh
 ```

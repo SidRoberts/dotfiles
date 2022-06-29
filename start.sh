@@ -2,6 +2,8 @@
 
 set -e
 
+SCRIPT_DIR=$(dirname -- "$(realpath $0)")
+
 DISK="/dev/sda"
 BOOT_PARTITION="${DISK}1"
 ROOT_PARTITION="${DISK}2"
@@ -123,6 +125,16 @@ arch-chroot /mnt sed -i 's/^# %wheel ALL=(ALL:ALL) ALL$/%wheel ALL=(ALL:ALL) ALL
 
 # Set the password
 echo "sidroberts:1234" | arch-chroot /mnt chpasswd
+
+
+
+##################
+# Copy to chroot #
+##################
+
+cp -R ${SCRIPT_DIR}/. /mnt/home/sidroberts/arch-install-script/
+
+arch-chroot /mnt chown -hR sidroberts:sidroberts /home/sidroberts/arch-install-script/
 
 
 
