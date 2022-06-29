@@ -324,10 +324,19 @@ sudo pacman -S ffmpeg --noconfirm --needed
 
 sudo pacman -S imagemagick --noconfirm --needed
 
-sudo pacman -S gimp --noconfirm --needed
-
 sudo pacman -S inkscape --noconfirm --needed
 
+
+
+########
+# GIMP #
+########
+
+sudo pacman -S gimp --noconfirm --needed
+
+mkdir -p ~/.config/GIMP/2.10/
+
+cp ${SCRIPT_DIR}/gimp/gimprc ~/.config/GIMP/2.10/gimprc
 
 
 ##############
