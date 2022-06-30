@@ -258,16 +258,19 @@ cp ${SCRIPT_DIR}/xfce4-terminal/nord.theme ~/.local/share/xfce4/terminal/colorsc
 # Fonts #
 #########
 
+sudo pacman -S noto-fonts --noconfirm --needed
+
 sudo pacman -S ttf-dejavu --noconfirm --needed
 
-# FontAwesome icons
-sudo pacman -S awesome-terminal-fonts --noconfirm --needed
+sudo pacman -S ttf-opensans --noconfirm --needed
 
 sudo pacman -S ttf-fira-code --noconfirm --needed
 
-sudo pacman -S noto-fonts noto-fonts-cjk --noconfirm --needed
+# Korean fonts
+sudo pacman -S noto-fonts-cjk adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts --noconfirm --needed
 
-sudo pacman -S adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts --noconfirm --needed
+# FontAwesome icons
+sudo pacman -S awesome-terminal-fonts --noconfirm --needed
 
 # Emoji
 sudo pacman -S noto-fonts-emoji --noconfirm --needed
