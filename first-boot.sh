@@ -98,7 +98,7 @@ makepkg -si
 # X Server #
 ############
 
-sudo pacman -S xorg xorg-xinit xterm --noconfirm --needed
+sudo pacman -S xorg-server xorg-xinit xterm --noconfirm --needed
 
 if [ "$(systemd-detect-virt)" = "none" ]; then
     sudo pacman -S xf86-video-intel mesa --noconfirm --needed
