@@ -54,6 +54,8 @@ cp ${SCRIPT_DIR}/bash/bash_aliases ~/.bash_aliases
 cp ${SCRIPT_DIR}/bash/bash_profile ~/.bash_profile
 cp ${SCRIPT_DIR}/bash/bashrc       ~/.bashrc
 
+sudo pacman -S bash-completion --noconfirm --needed
+
 
 
 #################
