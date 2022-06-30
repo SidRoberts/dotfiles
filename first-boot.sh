@@ -475,7 +475,7 @@ yay -S zoom --noconfirm --needed
 # XP Pen tablet #
 #################
 
-yay -S xp-pen-tablet  --noconfirm --needed
+yay -S xp-pen-tablet --noconfirm --needed
 
 
 
