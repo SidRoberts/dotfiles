@@ -543,6 +543,9 @@ mkdir -p ~/.config/"Code - OSS"/User/
 cp ${SCRIPT_DIR}/vs-code/Preferences   ~/.config/"Code - OSS"/Preferences
 cp ${SCRIPT_DIR}/vs-code/settings.json ~/.config/"Code - OSS"/User/settings.json
 
+# SASS extension
+code --install-extension syler.sass-indented
+
 
 
 #######################################
