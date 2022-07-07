@@ -362,6 +362,8 @@ sudo pacman -S yt-dlp --noconfirm --needed
 
 sudo pacman -S php --noconfirm --needed
 
+sudo pacman -S php-sqlite --noconfirm --needed
+
 yay -S php-yaml --noconfirm --needed
 
 sudo pacman -S xdebug --noconfirm --needed
