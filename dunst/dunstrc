@@ -11,7 +11,7 @@
     height = 300
 
     origin = bottom-right
-    offset = 30x110
+    offset = 20x50
 
     scale = 2
 
