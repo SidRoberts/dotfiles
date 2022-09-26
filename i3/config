@@ -19,6 +19,9 @@ workspace_layout default
 
 # Border indicator on windows
 new_window pixel 0
+default_border pixel 0
+default_floating_border pixel 0
+for_window [class="^.*"] border pixel 0
 
 gaps inner 15
 gaps outer -15
