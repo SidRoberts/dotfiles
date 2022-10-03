@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-output="$(date '+%a, %b %e, %-l:%M %p')"
+output="$(date '+%a, %b %-e, %-l:%M %p')"
 
 # Uppercase
 output="${output^^}"
