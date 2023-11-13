@@ -3,7 +3,7 @@
 set -e
 
 images=(
-    "sidroberts/beanstalkd:1.12"
+    "sidroberts/beanstalkd:1.13"
     "sidroberts/beanstalkd:latest"
     "sidroberts/mailhog:1.0.1"
     "sidroberts/mailhog:latest"
