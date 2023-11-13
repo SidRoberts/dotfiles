@@ -1,9 +1,9 @@
 include /usr/share/nano/*.nanorc
-include /usr/share/nano-syntax-highlighting/*.nanorc
 
 set autoindent
 set constantshow
 set mouse
+set rawsequences
 set smarthome
 set tabsize 4
 set tabstospaces

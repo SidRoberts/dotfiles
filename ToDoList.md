@@ -1,7 +1,6 @@
 # After installing
 
-[ ] Change the account password
-[ ] Log into Google Chrome
+[ ] Log into Firefox
 [ ] Set up rclone
 [ ] Set up XP Pen tablet
 [ ] [Add SSH key to GitHub](https://github.com/settings/ssh/new)
@@ -14,3 +13,5 @@
 [ ] Download ISOs (`Scripts/download-isos.sh`)
 [ ] Set up OBS
 [ ] Set up VS Code
+[ ] Install ngrok
+[ ] Remove old kernels

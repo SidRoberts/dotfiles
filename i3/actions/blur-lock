@@ -12,7 +12,7 @@ scrot -z $picture
 
 convert $picture \
 	-blur $blur \
-	-font /usr/share/fonts/noto/NotoSans-Regular.ttf \
+	-font /usr/share/fonts/google-noto/NotoSans-Regular.ttf \
 	-undercolor black \
 	-fill white \
 	-pointsize 60 \

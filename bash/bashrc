@@ -53,3 +53,11 @@ fi
 if [ -d ~/bin ]; then
     export PATH=~/bin:$PATH
 fi
+
+export PATH=~/.local/bin:$PATH
+
+
+
+source ~/.fonts/*.sh
+
+source /etc/profile.d/bash_completion.sh

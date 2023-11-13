@@ -5,7 +5,7 @@ if [ "$(systemd-detect-virt)" != "none" ]; then
     exit 0
 fi
 
-ssid="$(iwgetid -r)"
+ssid="$(nmcli connection show --active | grep wifi | awk '{print $1}')"
 
 if [ $? -eq 255 ]; then
     echo "%{F#BF616A}NOT CONNECTED%{F-}"

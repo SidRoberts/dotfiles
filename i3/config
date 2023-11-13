@@ -167,7 +167,7 @@ bindsym XF86AudioPrev exec playerctl previous
 #################
 
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+w      exec /usr/bin/google-chrome-stable
+bindsym $mod+w      exec /usr/bin/firefox
 bindsym $mod+n      exec /usr/bin/thunar
 
 
@@ -181,19 +181,20 @@ set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
 set $ws8 "8"
 set $ws9 "9"
 
 # Bind apps to specific workspaces
-assign [class="Xfce4-terminal"]    $ws1
-assign [class="(?i)google-chrome"] $ws2
-assign [class="Thunar"]            $ws3
-assign [class="code"]              $ws4
-
-assign [title="Welcome to Google Chrome"] $ws2
+assign [class="Xfce4-terminal"]       $ws1
+assign [class="(?i)firefox"]          $ws2
+assign [class="Thunar"]               $ws3
+assign [class="(?i)code"]             $ws4
+assign [class="mpv"]                  $ws5
+assign [class="(?i)transmission-gtk"] $ws6
+assign [class=".*"]                   $ws7
 
 # Anything that opens should be focused on
 for_window [class=".*"] focus
@@ -254,7 +255,7 @@ exec --no-startup-id xinput set-prop 'CyPS/2 Cypress Trackpad' 311 1
 ##################
 
 exec --no-startup-id sleep 1 && xfce4-terminal
-exec --no-startup-id sleep 1 && google-chrome-stable
+exec --no-startup-id sleep 1 && firefox
 exec --no-startup-id sleep 1 && thunar
 exec --no-startup-id sleep 1 && code
 

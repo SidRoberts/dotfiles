@@ -1,27 +1,20 @@
-# Sid's Arch Install Script
+# Sid's Fedora Install Script
 
-This script is designed to run on my *vintage* Dell XPS 13 (L322X, early 2013) and VirtualBox (with EFI enabled).
+This script is designed to run on my *vintage* Dell XPS 13 (L322X, early 2013) and VirtualBox.
 
 **Please don't run this yourself.** Fork and modify it, learn from it, critique it, but don't actually run the damn thing. :p
 
 ## How to run
 
-(The `install.sh` script simply installs Git and clones this repo).
-
-Boot into the Arch ISO image.
+Install the OS using the [Fedora i3 Spin 39](https://fedoraproject.org/spins/i3/) ISO image.
+Then run:
 
 ```bash
 curl https://sidroberts.co.uk/install.sh | bash
 ```
 
-Reboot.
+(The `install.sh` script simply downloads this repo and runs `setup.sh`).
 
-```bash
-cd arch-install-script/
-
-bash first-boot.sh
-```
-
-Reboot again.
+Once the script has finished, it will automatically reboot.
 
 Now, check out the `ToDoList.md` file in the home directory.
