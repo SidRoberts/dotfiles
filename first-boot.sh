@@ -350,9 +350,19 @@ cp ${SCRIPT_DIR}/gimp/gimprc ~/.config/GIMP/2.10/gimprc
 
 sudo pacman -S handbrake --noconfirm --needed
 
+sudo pacman -S yt-dlp --noconfirm --needed
+
+
+
+#######
+# mpv #
+#######
+
 sudo pacman -S mpv --noconfirm --needed
 
-sudo pacman -S yt-dlp --noconfirm --needed
+mkdir -p ~/.config/mpv/
+
+cp ${SCRIPT_DIR}/mpv/mpv.conf ~/.config/mpv/mpv.conf
 
 
 
