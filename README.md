@@ -11,9 +11,7 @@ This script is designed to run on my *vintage* Dell XPS 13 (L322X, early 2013) a
 Boot into the Arch ISO image.
 
 ```bash
-curl -O https://sidroberts.co.uk/install.sh
-
-bash install.sh
+curl https://sidroberts.co.uk/install.sh | bash
 ```
 
 Reboot.
