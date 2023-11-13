@@ -548,6 +548,9 @@ cp ${SCRIPT_DIR}/vs-code/settings.json ~/.config/"Code - OSS"/User/settings.json
 # SASS extension
 code --install-extension syler.sass-indented
 
+# Node color scheme
+code --install-extension arcticicestudio.nord-visual-studio-code
+
 
 
 #######################################
