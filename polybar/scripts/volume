@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-output=$(amixer get Master)
+output=$(amixer get Master 2> /dev/null)
+
+if [ "$?" -ne 0 ]; then
+    echo "%{F#EBCB8B} UNKNOWN%{F-}"
+    exit 0
+fi
 
 if [[ "$output" == *"[off]"* ]]; then
-   echo "%{F#EBCB8B} MUTED%{F-}"
-   exit 0
+    echo "%{F#EBCB8B} MUTED%{F-}"
+    exit 0
 fi
 
 percentage=$(echo $output | sed -E 's/.*\[([0-9]+)%\].*/\1/g')
