@@ -14,7 +14,7 @@ fi
 
 # Truncate long SSIDs
 if [ ${#ssid} -ge 40 ]; then
-    title="${ssid:0:40}..."
+    ssid="${ssid:0:40}..."
 fi
 
 # Uppercase
