@@ -321,6 +321,14 @@ sudo dnf -y install composer
 
 
 
+##############
+# Node / NPM #
+##############
+
+sudo dnf -y install nodejs nodejs-npm
+
+
+
 ##########
 # Docker #
 ##########
