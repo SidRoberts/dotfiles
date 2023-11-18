@@ -208,11 +208,9 @@ sudo dnf -y install fira-code-fonts
 sudo dnf -y install google-noto-sans-cjk-fonts google-noto-serif-cjk-fonts adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
 
 # FontAwesome icons
-wget https://github.com/gabrielelana/awesome-terminal-fonts/archive/refs/heads/master.zip
-unzip master.zip
-cd awesome-terminal-fonts-master/
-cp -R build/. ~/.fonts/
-fc-cache -fv ~/.fonts/
+wget https://github.com/gabrielelana/awesome-terminal-fonts/archive/refs/heads/master.zip -O /tmp/awesome-terminal-fonts.zip
+unzip /tmp/awesome-terminal-fonts.zip -d /tmp/
+/tmp/awesome-terminal-fonts-master/install.sh
 
 # Emoji
 sudo dnf -y install google-noto-emoji-fonts
@@ -225,10 +223,9 @@ sudo dnf -y install google-noto-emoji-fonts
 
 sudo dnf -y install arc-theme
 
-wget https://github.com/vinceliuice/Qogir-theme/archive/refs/heads/master.zip
-unzip master.zip
-cd Qogir-theme-master/
-./install.sh
+wget https://github.com/vinceliuice/Qogir-theme/archive/refs/heads/master.zip -O /tmp/qogir-theme.zip
+unzip /tmp/qogir-theme.zip -d /tmp/
+/tmp/Qogir-theme-master/install.sh
 
 cp -R ${SCRIPT_DIR}/gtk/gtk-2.0/. ~/.config/gtk-2.0/
 cp -R ${SCRIPT_DIR}/gtk/gtk-3.0/. ~/.config/gtk-3.0/
