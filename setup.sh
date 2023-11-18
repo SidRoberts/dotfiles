@@ -240,7 +240,7 @@ cp -R ${SCRIPT_DIR}/gtk/gtk-4.0/. ~/.config/gtk-4.0/
 # Greenclip - clipboard manager #
 #################################
 
-wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip -o ~/bin/greenclip
+wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip -O ~/bin/greenclip
 
 chmod +x ~/bin/greenclip
 
