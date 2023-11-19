@@ -32,6 +32,7 @@ Now, check out the `ToDoList.md` file in the home directory.
 - [Nitrogen](https://github.com/l3ib/nitrogen/), [Picom](https://github.com/yshui/picom), [Greenclip](https://github.com/erebe/greenclip), [Dunst](https://dunst-project.org/), [Rofi](https://github.com/davatorium/rofi)
 - [Firefox](https://www.mozilla.org/firefox/)
 - [Thunar](https://docs.xfce.org/xfce/thunar/start)
+- [Xarchiver](https://github.com/ib/xarchiver)
 - [mpv](https://mpv.io/)
 - [Xfce4 Terminal](https://docs.xfce.org/apps/terminal/start)
 - [VS Code](https://code.visualstudio.com/)

@@ -129,6 +129,16 @@ cp ${SCRIPT_DIR}/thunar/thunar-volman.xml ~/.config/xfce4/xfconf/xfce-perchannel
 
 
 
+#############
+# Xarchiver #
+#############
+
+sudo dnf -y install xarchiver
+
+cp ${SCRIPT_DIR}/xarchiver/xarchiverrc ~/.config/xarchiver/xarchiverrc
+
+
+
 #########
 # picom #
 #########
