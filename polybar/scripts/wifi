@@ -5,10 +5,10 @@ if [ "$(systemd-detect-virt)" != "none" ]; then
     exit 0
 fi
 
-ssid="$(nmcli connection show --active | grep wifi | awk '{print $1}')"
+ssid="$(nmcli -t -f name,device connection show --active | grep wlp1s0 | cut -d: -f 1)"
 
-if [ $? -eq 255 ]; then
-    echo "%{F#BF616A}NOT CONNECTED%{F-}"
+if [ ${#ssid} -eq 0 ]; then
+    echo "%{F#BF616A} NOT CONNECTED%{F-}"
     exit 33
 fi
 
