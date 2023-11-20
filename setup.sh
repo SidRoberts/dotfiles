@@ -113,7 +113,7 @@ sudo gpasswd -a ${USER} autologin
 # Polybar #
 ###########
 
-sudo dnf -y install https://dl.fedoraproject.org/pub/fedora/linux/updates/testing/39/Everything/x86_64/Packages/p/polybar-3.7.0-1.fc39.x86_64.rpm
+sudo dnf -y install polybar
 
 cp -R ${SCRIPT_DIR}/polybar/. ~/.config/polybar/
 
