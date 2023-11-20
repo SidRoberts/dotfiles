@@ -76,6 +76,7 @@ mkdir ~/VMs/
 
 rm -r ~/Desktop/
 rm -r ~/Documents/
+rm -r ~/Public/
 rm -r ~/Templates/
 
 cp ${SCRIPT_DIR}/xdg-user-dirs/user-dirs.dirs ~/.config/
