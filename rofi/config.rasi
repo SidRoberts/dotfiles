@@ -1,5 +1,1 @@
-configuration {
-    show-icons: false;
-}
-
 @import "/home/sidroberts/.config/rofi/nord.rasi"
