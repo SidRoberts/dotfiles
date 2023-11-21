@@ -437,7 +437,7 @@ sudo dnf -y install https://zoom.us/client/5.16.6.382/zoom_x86_64.rpm
 # XP Pen tablet #
 #################
 
-curl "https://www.xp-pen.com/download/file.html?id=1948&pid=430&ext=rpm" --output /tmp/xp-pen.rpm
+wget "https://www.xp-pen.com/download/file.html?id=1948&pid=430&ext=rpm" -O /tmp/xp-pen.rpm
 
 sudo dnf -y install /tmp/xp-pen.rpm
 
