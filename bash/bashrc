@@ -44,20 +44,6 @@ bind '"\e[B":history-search-forward'
 
 
 
-# Add Composer global vendor to PATH
-if [ -d ~/.config/composer/vendor/bin ]; then
-    export PATH=~/.config/composer/vendor/bin:$PATH
-fi
-
-# Add user bin to PATH
-if [ -d ~/bin ]; then
-    export PATH=~/bin:$PATH
-fi
-
-export PATH=~/.local/bin:$PATH
-
-
-
 source ~/.fonts/*.sh
 
 source /etc/profile.d/bash_completion.sh

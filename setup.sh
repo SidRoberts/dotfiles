@@ -59,6 +59,7 @@ sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 # Bash #
 ########
 
+cp ${SCRIPT_DIR}/bash/profile      ~/.profile
 cp ${SCRIPT_DIR}/bash/bash_aliases ~/.bash_aliases
 cp ${SCRIPT_DIR}/bash/bash_profile ~/.bash_profile
 cp ${SCRIPT_DIR}/bash/bashrc       ~/.bashrc
