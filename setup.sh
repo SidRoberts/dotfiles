@@ -556,6 +556,14 @@ sudo dnf -y remove mousepad
 
 
 
+###########################
+# Download Fedora torrent #
+###########################
+
+wget https://torrent.fedoraproject.org/torrents/Fedora-i3-Live-x86_64-39.torrent -O ~/Downloads/Fedora-i3-Live-x86_64-39.torrent
+
+
+
 ##################
 # Add to-do list #
 ##################

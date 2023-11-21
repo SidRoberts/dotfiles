@@ -10,7 +10,6 @@
 [ ] `git clone` important repos (`Scripts/download-git-repos.sh`)
 [ ] `docker pull` important images (`Scripts/docker-pull.sh`)
 [ ] Change Zoom recordings directory to `~/Zoom`
-[ ] Download ISOs (`Scripts/download-isos.sh`)
 [ ] Set up OBS
 [ ] Set up VS Code
 [ ] Install ngrok
