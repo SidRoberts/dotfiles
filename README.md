@@ -2,8 +2,6 @@
 
 My collection of config and setup files for my Linux system.
 
-This script is designed to run on my *vintage* Dell XPS 13 (L322X, early 2013) and VirtualBox.
-
 **Please don't run this yourself.** Fork and modify it, learn from it, critique it, but don't actually run the damn thing. :p
 
 
