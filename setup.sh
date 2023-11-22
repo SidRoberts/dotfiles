@@ -518,11 +518,44 @@ mkdir -p ~/.config/Code/User/
 cp ${SCRIPT_DIR}/vs-code/Preferences   ~/.config/Code/Preferences
 cp ${SCRIPT_DIR}/vs-code/settings.json ~/.config/Code/User/settings.json
 
-# SASS extension
+# Extension: Add link to manual for PHP & WP function hints
+code --install-extension Abromeit.add-hint-link-to-manual
+
+# Extension: Auto Rename Tag
+code --install-extension formulahendry.auto-rename-tag
+
+# Extension: Better Comments
+code --install-extension aaron-bond.better-comments
+
+# Extension: Docker
+code --install-extension ms-azuretools.vscode-docker
+
+# Extension: Dotenv Official +Vault
+code --install-extension dotenv.dotenv-vscode
+
+# Extension: EditorConfig for VS Code
+code --instal-extension EditorConfig.EditorConfig
+
+# Extension: Nord
+code --install-extension arcticicestudio.nord-visual-studio-code
+
+# Extension: npm Instellisense
+code --install-extension christian-kohler.npm-intellisense
+
+# Extension: PHP Intelephense
+code --install-extension bmewburn.vscode-intelephense-client
+
+# Extension: Psalm (PHP Static Analysis Linting Machine)
+code --install-extension getpsalm.psalm-vscode-plugin
+
+# Extension: Sass (.sass only)
 code --install-extension syler.sass-indented
 
-# Node color scheme
-code --install-extension arcticicestudio.nord-visual-studio-code
+# Extension: SQLite
+code --install-extension alexcvzz.vscode-sqlite
+
+# Extension: Twig
+code --install-extension whatwedo.twig
 
 
 
