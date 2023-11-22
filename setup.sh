@@ -425,6 +425,18 @@ cp ${SCRIPT_DIR}/git/gitconfig ~/.gitconfig
 
 
 
+##########
+# GitHub #
+##########
+
+sudo dnf -y install 'dnf-command(config-manager)'
+
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+
+sudo dnf -y install gh
+
+
+
 ########
 # Zoom #
 ########
