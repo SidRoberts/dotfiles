@@ -601,6 +601,16 @@ sudo dnf -y remove mousepad
 
 
 
+#############
+# Backlight #
+#############
+
+sudo cp backlight/backlight.rules /etc/udev/rules.d/backlight.rules
+
+sudo usermod -aG video ${USER}
+
+
+
 ###########################
 # Download Fedora torrent #
 ###########################

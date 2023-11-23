@@ -5,6 +5,6 @@ if [ "$(systemd-detect-virt)" != "none" ]; then
     exit 0
 fi
 
-output=$(xbacklight -get | cut -d '.' -f 1)
+output=$(cat /sys/class/backlight/acpi_video0/brightness)
 
 echo " ${output}%"
