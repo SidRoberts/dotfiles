@@ -572,6 +572,21 @@ cp ${SCRIPT_DIR}/projecteur/Projecteur.conf ~/.config/Projecteur/Projecteur.conf
 
 
 ########
+# Meld #
+########
+
+sudo dnf -y install meld
+
+gsettings set org.gnome.meld highlight-current-line true
+gsettings set org.gnome.meld highlight-syntax true
+gsettings set org.gnome.meld indent-width 4
+gsettings set org.gnome.meld insert-spaces-instead-of-tabs true
+gsettings set org.gnome.meld show-line-numbers true
+gsettings set org.gnome.meld vc-commit-margin 80
+
+
+
+########
 # Misc #
 ########
 
@@ -586,8 +601,6 @@ sudo dnf -y install gparted
 sudo dnf -y install scrot
 
 sudo dnf -y install rclone
-
-sudo dnf -y install meld
 
 
 
