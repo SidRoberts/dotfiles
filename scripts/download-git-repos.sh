@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-set -e
-
-repos=(
-    "ssh://git@github.com/SidRoberts/centum.git"
-    "ssh://git@github.com/SidRoberts/centum-project.git"
-)
+repos=$(gh repo list | head -n -2 | cut -f1)
 
 cd ~/Code/
 
-for repo in "${repos[@]}"; do
-    git clone "${repo}"
+for repo in $repos; do
+    gh repo clone "${repo}"
 done
