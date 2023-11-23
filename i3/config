@@ -134,7 +134,7 @@ bindsym XF86MonBrightnessDown exec ~/.config/i3/actions/backlight --decrease && 
 # Rofi menu keybindings #
 #########################
 
-bindsym $mod+Shift+e exec ~/.config/i3/actions/power-menu
+bindsym $mod+Escape exec ~/.config/i3/actions/power-menu
 
 bindsym $mod+d exec ~/.config/i3/actions/applications-menu
 

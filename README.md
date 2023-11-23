@@ -76,7 +76,7 @@ Now, check out the `ToDoList.md` file in the home directory.
 
 - `Win+C` - Clipboard manager
 
-- `Win+Shift+e` - Power menu
+- `Win+Escape` - Power menu
 
 ### Git Aliases
 
