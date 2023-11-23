@@ -200,6 +200,8 @@ assign [class=".*"]                   $ws7
 # Anything that opens should be focused on
 for_window [class=".*"] focus
 
+# Urgent windows should be focused on
+for_window [urgent="latest"] focus
 
 
 ##############
