@@ -534,7 +534,7 @@ code --install-extension ms-azuretools.vscode-docker
 code --install-extension dotenv.dotenv-vscode
 
 # Extension: EditorConfig for VS Code
-code --instal-extension EditorConfig.EditorConfig
+code --install-extension EditorConfig.EditorConfig
 
 # Extension: markdownlint
 code --install-extension DavidAnson.vscode-markdownlint
