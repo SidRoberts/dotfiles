@@ -559,6 +559,14 @@ code --install-extension whatwedo.twig
 
 
 
+##########
+# Jekyll #
+##########
+
+sudo dnf install -y rubygem-jekyll ruby-devel
+
+
+
 #######################################
 # Projecteur - for Logitech Spotlight #
 #######################################
