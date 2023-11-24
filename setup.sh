@@ -291,7 +291,7 @@ cp ${SCRIPT_DIR}/gimp/gimprc ~/.config/GIMP/2.10/gimprc
 # Video apps #
 ##############
 
-sudo dnf -y install handbrake
+sudo dnf -y install handbrake-gui
 
 sudo dnf -y install yt-dlp
 
