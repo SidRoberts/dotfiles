@@ -536,6 +536,9 @@ code --install-extension dotenv.dotenv-vscode
 # Extension: EditorConfig for VS Code
 code --instal-extension EditorConfig.EditorConfig
 
+# Extension: markdownlint
+code --install-extension DavidAnson.vscode-markdownlint
+
 # Extension: Nord
 code --install-extension arcticicestudio.nord-visual-studio-code
 
@@ -564,6 +567,14 @@ code --install-extension whatwedo.twig
 ##########
 
 sudo dnf install -y rubygem-jekyll ruby-devel
+
+
+
+################
+# markdownlint #
+################
+
+sudo npm install -g markdownlint-cli
 
 
 
