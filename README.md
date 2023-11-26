@@ -78,6 +78,9 @@ Now, check out the `ToDoList.md` file in the home directory.
 
 - `Win+Escape` - Power menu
 
+- `Win+/` - Google Search
+- `Win+#` - Google Translate
+
 ### Git Aliases
 
 - `git aliases`  - Show all aliases and their commands.

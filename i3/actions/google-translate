@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+QUERY="$(rofi -dmenu -p 'Translate' -lines 0 -no-fixed-num-lines | jq -Rr @uri)"
+
+if [ "$QUERY" == "" ]; then
+    exit 0
+fi
+
+xdg-open "https://translate.google.com/?sl=auto&tl=en&text=${QUERY}&op=translate"
+
+i3-msg [class="(?i)firefox"] focus

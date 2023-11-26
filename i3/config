@@ -142,6 +142,9 @@ bindsym $mod+t exec ~/.config/i3/actions/windows-menu
 
 bindsym $mod+c exec ~/.config/i3/actions/clipboard-manager
 
+bindsym $mod+slash exec ~/.config/i3/actions/google-search
+bindsym $mod+numbersign exec ~/.config/i3/actions/google-translate
+
 
 
 ##########################
