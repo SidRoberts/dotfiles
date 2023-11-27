@@ -125,8 +125,8 @@ bindsym Print exec ~/.config/i3/actions/screenshot
 bindsym $mod+l exec ~/.config/i3/actions/blur-lock
 
 # Backlight control
-bindsym XF86MonBrightnessUp   exec ~/.config/i3/actions/backlight --increase && pkill -RTMIN+1 i3blocks
-bindsym XF86MonBrightnessDown exec ~/.config/i3/actions/backlight --decrease && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessUp   exec ~/.config/i3/actions/backlight --increase
+bindsym XF86MonBrightnessDown exec ~/.config/i3/actions/backlight --decrease
 
 
 
@@ -152,11 +152,11 @@ bindsym $mod+numbersign exec ~/.config/i3/actions/google-translate
 ##########################
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec ~/.config/i3/actions/volume-adjust 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec ~/.config/i3/actions/volume-adjust 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/actions/volume-adjust 5%+
+bindsym XF86AudioLowerVolume exec ~/.config/i3/actions/volume-adjust 5%-
 
 # Mute
-bindsym XF86AudioMute exec ~/.config/i3/actions/volume-mute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec ~/.config/i3/actions/volume-mute
 
 # Audio controls
 bindsym XF86AudioPlay exec playerctl play-pause
