@@ -10,7 +10,7 @@
     gpgsign = true
 
 [init]
-    defaultBranch = development
+    defaultBranch = main
 
 [checkout]
     defaultRemote = origin
