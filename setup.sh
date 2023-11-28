@@ -609,6 +609,8 @@ gsettings set org.gnome.meld vc-commit-margin 80
 # Misc #
 ########
 
+sudo dnf -y install polkit-gnome
+
 sudo dnf -y install acpi
 
 sudo dnf -y install tldr

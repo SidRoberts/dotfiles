@@ -228,7 +228,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 ######################
 
 # Start an authentication agent to get a password prompt when applications require certain root privileges
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
