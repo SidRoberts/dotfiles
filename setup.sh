@@ -600,7 +600,9 @@ gsettings set org.gnome.meld highlight-current-line true
 gsettings set org.gnome.meld highlight-syntax true
 gsettings set org.gnome.meld indent-width 4
 gsettings set org.gnome.meld insert-spaces-instead-of-tabs true
+gsettings set org.gnome.meld prefer-dark-theme true
 gsettings set org.gnome.meld show-line-numbers true
+gsettings set org.gnome.meld style-scheme oblivion
 gsettings set org.gnome.meld vc-commit-margin 80
 
 
