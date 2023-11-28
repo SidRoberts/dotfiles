@@ -170,8 +170,8 @@ bindsym XF86AudioPrev exec playerctl previous
 #################
 
 bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+w      exec /usr/bin/firefox
-bindsym $mod+n      exec /usr/bin/thunar
+bindsym $mod+w      exec firefox
+bindsym $mod+n      exec thunar
 
 
 
