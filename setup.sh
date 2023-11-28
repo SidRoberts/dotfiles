@@ -384,6 +384,23 @@ sudo cp ${SCRIPT_DIR}/cups/cups-pdf.conf /etc/cups/cups-pdf.conf
 
 
 
+############
+# Scanning #
+############
+
+mkdir ~/Pictures/Scans
+
+sudo dnf -y install simple-scan
+
+gsettings set org.gnome.SimpleScan text-dpi 300
+gsettings set org.gnome.SimpleScan photo-dpi 300
+
+gsettings set org.gnome.SimpleScan jpeg-quality 80
+
+gsettings set org.gnome.SimpleScan save-directory "file://${HOME}/Pictures/Scans"
+
+
+
 ###########################
 # Disable internal webcam #
 ###########################
