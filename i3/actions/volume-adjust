@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
+output=$(amixer get Master 2> /dev/null)
+
+if [ "$?" -ne 0 ] || [[ "$output" == *"[off]"* ]]; then
+    exit 0
+fi
+
 amixer sset Master $1
