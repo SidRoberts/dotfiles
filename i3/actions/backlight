@@ -3,18 +3,18 @@
 declare x=$(cat "/sys/class/backlight/acpi_video0/brightness")
 
 for i in "$@"; do
-  case $i in
-    --increase)
-      x=$((x+10))
-      shift
-      ;;
-    --decrease)
-      x=$((x-10))
-      shift
-      ;;
-    *)
-      ;;
-  esac
+    case $i in
+        --increase)
+            x=$((x+10))
+            shift
+            ;;
+        --decrease)
+            x=$((x-10))
+            shift
+            ;;
+        *)
+            ;;
+    esac
 done
 
 if [[ ${x} -lt 0 ]]; then

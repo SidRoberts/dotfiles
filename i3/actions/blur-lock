@@ -11,14 +11,14 @@ blur="8x5"
 scrot -z $picture
 
 convert $picture \
-	-blur $blur \
-	-font /usr/share/fonts/google-noto/NotoSans-Regular.ttf \
-	-undercolor black \
-	-fill white \
-	-pointsize 60 \
-	-gravity center \
-	-draw "text 0,300 'Computer is locked.'" \
-	$picture
+    -blur $blur \
+    -font /usr/share/fonts/google-noto/NotoSans-Regular.ttf \
+    -undercolor black \
+    -fill white \
+    -pointsize 60 \
+    -gravity center \
+    -draw "text 0,300 'Computer is locked.'" \
+    $picture
 
 i3lock -i $picture -f -e
 

@@ -5,10 +5,10 @@ typeset -A menu
 
 # Menu with keys/commands
 menu=(
-  [ Shutdown]="systemctl poweroff"
-  [ Reboot]="systemctl reboot"
-  [ Suspend]="systemctl suspend"
-  [ Cancel]=""
+    [ Shutdown]="systemctl poweroff"
+    [ Reboot]="systemctl reboot"
+    [ Suspend]="systemctl suspend"
+    [ Cancel]=""
 )
 
 menu_nrows=${#menu[@]}
@@ -16,5 +16,5 @@ menu_nrows=${#menu[@]}
 selection="$(printf '%s\n' "${!menu[@]}" | rofi -dmenu -i -lines "${menu_nrows}" -p '')"
 
 if [[ $? -eq 0 && ! -z ${selection} ]]; then
-  i3-msg -q "exec ${menu[${selection}]}"
+    i3-msg -q "exec ${menu[${selection}]}"
 fi
