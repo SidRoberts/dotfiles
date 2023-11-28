@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Abort when within a VM
+if [ "$(systemd-detect-virt)" != "none" ]; then
+    exit 0
+fi
+
 declare x=$(cat "/sys/class/backlight/acpi_video0/brightness")
 
 for i in "$@"; do

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Abort when within a VM
+if [ "$(systemd-detect-virt)" != "none" ]; then
+    exit 0
+fi
+
 # If something is playing then don't suspend
 if [[ $(playerctl status) == "Playing" ]]; then
     exit
