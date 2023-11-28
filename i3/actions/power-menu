@@ -7,9 +7,12 @@ typeset -A menu
 menu=(
     [ Shutdown]="systemctl poweroff"
     [ Reboot]="systemctl reboot"
-    [ Suspend]="systemctl suspend"
-    [ Cancel]=""
 )
+
+# Can't suspend in a VM
+if [ "$(systemd-detect-virt)" == "none" ]; then
+    menu[ Suspend]="systemctl suspend"
+fi
 
 menu_nrows=${#menu[@]}
 
