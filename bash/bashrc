@@ -44,6 +44,4 @@ bind '"\e[B":history-search-forward'
 
 
 
-source ~/.fonts/*.sh
-
 source /etc/profile.d/bash_completion.sh

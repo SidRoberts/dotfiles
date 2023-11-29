@@ -220,9 +220,7 @@ sudo dnf -y install fira-code-fonts
 sudo dnf -y install google-noto-sans-cjk-fonts google-noto-serif-cjk-fonts adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
 
 # FontAwesome icons
-wget https://github.com/gabrielelana/awesome-terminal-fonts/archive/refs/heads/master.zip -O /tmp/awesome-terminal-fonts.zip
-unzip /tmp/awesome-terminal-fonts.zip -d /tmp/
-/tmp/awesome-terminal-fonts-master/install.sh
+sudo dnf -y install fontawesome-6-free-fonts fontawesome-6-brands-fonts
 
 # Emoji
 sudo dnf -y install google-noto-emoji-fonts

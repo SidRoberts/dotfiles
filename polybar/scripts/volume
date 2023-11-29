@@ -3,7 +3,7 @@
 output=$(amixer get Master 2> /dev/null)
 
 if [ "$?" -ne 0 ]; then
-    echo "%{F#BF616A} UNKNOWN%{F-}"
+    echo "%{F#BF616A} UNKNOWN%{F-}"
     exit 0
 fi
 
