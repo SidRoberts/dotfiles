@@ -40,6 +40,7 @@ Now, check out the `ToDoList.md` file in the home directory.
 - [Handbrake](https://handbrake.fr/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp), [ffmpeg](https://www.ffmpeg.org/)
 - [PHP](https://www.php.net/) with [Xdebug](https://xdebug.org/) and [yaml support](https://www.php.net/manual/en/book.yaml.php), [Composer](https://getcomposer.org/)
+- [Python](https://www.python.org/) with [Pip](https://pypi.org/project/pip/)
 - [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/)
 - [Autotrash](https://github.com/bneijt/autotrash)
 - [Print to PDF support](https://www.cups-pdf.de/)

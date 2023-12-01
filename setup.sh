@@ -522,6 +522,16 @@ fi
 
 
 
+##########
+# Python #
+##########
+
+sudo dnf -y install python3
+
+sudo dnf -y install python3-pip
+
+
+
 ###########
 # VS Code #
 ###########
@@ -569,6 +579,9 @@ code --install-extension bmewburn.vscode-intelephense-client
 
 # Extension: Psalm (PHP Static Analysis Linting Machine)
 code --install-extension getpsalm.psalm-vscode-plugin
+
+# Extension: Python
+code --install-extension ms-python.python
 
 # Extension: Sass (.sass only)
 code --install-extension syler.sass-indented
