@@ -2,7 +2,11 @@
 
 set -e
 
+if [[ "$(cat /etc/system-release)" != "Fedora release 39 (Thirty Nine)" ]] || [[ "${XDG_CURRENT_DESKTOP}" != "i3" ]]; then
+    echo "This script is only designed to work on Fedora i3 Spin 39. Now exiting."
 
+    exit 1
+fi
 
 echo "==============================="
 echo "= Sid's Fedora Install Script ="
