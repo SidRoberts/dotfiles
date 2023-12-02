@@ -5,6 +5,9 @@
     "workbench.startupEditor": "none",
     "terminal.integrated.fontFamily": "'Fira Code Light'",
     "terminal.integrated.lineHeight": 1.3,
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
+    "editor.rulers": [
+        80,120
+    ],
     "workbench.colorTheme": "Nord"
 }
