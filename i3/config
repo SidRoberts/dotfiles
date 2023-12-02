@@ -234,7 +234,7 @@ exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # Set wallpaper
-exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
 
 # Clipboard manager
 exec --no-startup-id greenclip daemon > /dev/null
