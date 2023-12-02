@@ -1,8 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-output="$(date '+%a, %b %-e, %-l:%M %p')"
+import datetime
 
-# Uppercase
-output="${output^^}"
+fontawesome = {
+    'clock': '\uf017', # 
+}
 
-echo " ${output}"
+now = datetime.datetime.now()
+
+timestamp = now.strftime('%a, %b %-e, %-l:%M %p').upper()
+
+print(fontawesome['clock'] + ' ' + timestamp)

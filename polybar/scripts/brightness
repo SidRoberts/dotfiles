@@ -1,10 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-# Hide when within a VM
-if [ "$(systemd-detect-virt)" != "none" ]; then
-    exit 0
-fi
+import vm_detect
+import subprocess
 
-output=$(cat /sys/class/backlight/acpi_video0/brightness)
+vm_detect.exit_if_vm()
 
-echo " ${output}%"
+fontawesome = {
+    'sun': '\uf185', # 
+}
+
+def file_get_contents(path):
+    return subprocess.check_output(['cat', path], universal_newlines=True)
+
+brightness = file_get_contents('/sys/class/backlight/acpi_video0/brightness')
+
+brightness = brightness.rstrip('\n') + '%'
+
+print(fontawesome['sun'] + ' ' + brightness)

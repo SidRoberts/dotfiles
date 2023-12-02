@@ -1,23 +1,28 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-# Hide when within a VM
-if [ "$(systemd-detect-virt)" != "none" ]; then
-    exit 0
-fi
+import subprocess
+import re
+import vm_detect
+import colors
+import truncate
 
-ssid="$(nmcli -t -f name,device connection show --active | grep wlp1s0 | cut -d: -f 1)"
+vm_detect.exit_if_vm()
 
-if [ ${#ssid} -eq 0 ]; then
-    echo "%{F#BF616A} NOT CONNECTED%{F-}"
-    exit 33
-fi
+fontawesome = {
+    'wifi': '\uf1eb', # 
+}
 
-# Truncate long SSIDs
-if [ ${#ssid} -ge 40 ]; then
-    ssid="${ssid:0:40}..."
-fi
+nmcli_active_connection = subprocess.run(['nmcli', '-t', '-f', 'name,device', 'connection', 'show', '--active'], universal_newlines=True, check=False, capture_output=True)
 
-# Uppercase
-ssid="${ssid^^}"
+wireless_connections = re.findall(r'(.*):wlp1s0', nmcli_active_connection.stdout)
 
-echo " ${ssid}"
+if not wireless_connections:
+    print(colors.error(fontawesome['wifi'] + ' NOT CONNECTED'))
+
+    exit(0)
+
+ssid = wireless_connections[0]
+
+ssid = truncate.truncate(ssid, 40)
+
+print(fontawesome['wifi'] + ' ' + ssid.upper())

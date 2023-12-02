@@ -1,62 +1,64 @@
 #!/usr/bin/env python3
 
-from subprocess import check_output
-from subprocess import run
+import vm_detect
+import subprocess
+import colors
 
-def error(message):
-    return "%{F#BF616A}" + message + "%{F-}"
+vm_detect.exit_if_vm()
 
-def warning(message):
-    return "%{F#EBCB8B}" + message + "%{F-}"
+fontawesome = {
+    'battery-empty':          '\uf244', # 
+    'battery-full':           '\uf240', # 
+    'battery-half':           '\uf242', # 
+    'battery-quarter':        '\uf243', # 
+    'battery-three-quarters': '\uf241', # 
+    'bolt':                   '\uf0e7', # 
+    'plug':                   '\uf1e6', # 
+}
 
-virt_status = run(["systemd-detect-virt"], universal_newlines=True, check=False, capture_output=True).stdout
-
-virt_status = virt_status.rstrip("\n")
-
-if virt_status != "none":
-    exit(0)
-
-battery = check_output(["acpi", "-b"], universal_newlines=True)
+battery = subprocess.check_output(['acpi', '-b'], universal_newlines=True)
 
 if not battery:
-    print(error("BATTERY NOT FOUND"))
+    print(colors.error('BATTERY NOT FOUND'))
+
     exit(0)
 
-battery = battery.rstrip("\n")
+battery = battery.rstrip('\n')
 
 # Remove name
-battery = battery.split(": ")[1]
+battery = battery.split(': ')[1]
 
-battery = battery.split(", ")
+battery = battery.split(', ')
 
 state = battery[0]
 
-if state == "Unknown":
-    print(error("BATTERY STATE UNKNOWN"))
+if state == 'Unknown':
+    print(colors.error('BATTERY STATE UNKNOWN'))
+
     exit(0)
 
-percent = int(battery[1].rstrip("%"))
+percent = int(battery[1].rstrip('%'))
 
-if state == "Full":
-    icon = "\uf1e6" # Plug symbol
-elif state == "Charging":
-    icon = "\uf0e7" # Lightning symbol
+if state == 'Full':
+    icon = 'plug'
+elif state == 'Charging':
+    icon = 'bolt'
 elif percent > 80:
-    icon = "\uf240" # Full battery symbol
+    icon = 'battery-full'
 elif percent > 60:
-    icon = "\uf241" # 3/4 full battery symbol
+    icon = 'battery-three-quarters'
 elif percent > 40:
-    icon = "\uf242" # 1/2 full battery symbol
+    icon = 'half'
 elif percent > 20:
-    icon = "\uf243" # 1/4 full battery symbol
+    icon = 'battery-quarter'
 else:
-    icon = "\uf244" # Empty battery symbol
+    icon = 'battery-empty'
 
-output = "{} {}%".format(icon, percent)
+output = '{} {}%'.format(fontawesome[icon], percent)
 
 if percent < 10:
-    output = error(output)
+    output = colors.error(output)
 elif percent < 20:
-    output = warning(output)
+    output = colors.warning(output)
 
 print(output)

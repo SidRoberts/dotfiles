@@ -1,25 +1,41 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-output=$(amixer get Master 2> /dev/null)
+import subprocess
+import colors
+import re
 
-if [ "$?" -ne 0 ]; then
-    echo "%{F#BF616A} UNKNOWN%{F-}"
-    exit 0
-fi
+fontawesome = {
+    'volume-high':  '\uf028', # 
+    'volume-low':   '\uf027', # 
+    'volume-off':   '\uf026', # 
+    'volume-xmark': '\uf6a9', # 
+}
 
-if [[ "$output" == *"[off]"* ]]; then
-    echo "%{F#EBCB8B} MUTED%{F-}"
-    exit 0
-fi
+amixer_get_master = subprocess.run(['amixer', 'get', 'Master'], universal_newlines=True, check=False, capture_output=True)
 
-percentage=$(echo $output | sed -E 's/.*\[([0-9]+)%\].*/\1/g')
+if amixer_get_master.returncode != 0:
+    print(colors.error(fontawesome['volume-xmark'] + ' UNKNOWN'))
 
-if [ "${percentage}" -eq 0 ]; then
-    icon=""
-elif [ "${percentage}" -le 50 ]; then
-    icon=""
-else
-    icon=""
-fi
+    exit(0)
 
-echo "${icon} ${percentage}%"
+output = amixer_get_master.stdout
+
+if '[off]' in output:
+    print(colors.warning(fontawesome['volume-off'] + ' MUTED'))
+
+    exit(0)
+
+percentages = re.findall(r'\[(\d+)%\]', output)
+
+percentages = list(map(int, percentages))
+
+average_percentage = sum(percentages) // len(percentages)
+
+if average_percentage == 0:
+    icon = 'volume-off'
+elif average_percentage < 50:
+    icon = 'volume-low'
+else:
+    icon = 'volume-high'
+
+print('{} {}%'.format(fontawesome[icon], average_percentage))
