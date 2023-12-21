@@ -11,5 +11,6 @@
     ],
     "telemetry.telemetryLevel": "off",
     "intelephense.telemetry.enabled": false,
-    "workbench.colorTheme": "Nord"
+    "workbench.colorTheme": "Nord",
+    "window.menuBarVisibility": "toggle"
 }
