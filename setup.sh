@@ -565,6 +565,9 @@ code --install-extension dotenv.dotenv-vscode
 # Extension: EditorConfig for VS Code
 code --install-extension EditorConfig.EditorConfig
 
+# Extension: GitLens - Git supercharged
+code --install-extension eamodio.gitlens
+
 # Extension: markdownlint
 code --install-extension DavidAnson.vscode-markdownlint
 
