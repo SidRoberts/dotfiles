@@ -568,6 +568,9 @@ code --install-extension EditorConfig.EditorConfig
 # Extension: GitLens - Git supercharged
 code --install-extension eamodio.gitlens
 
+# Extension: Gremlins tracker for Visual Studio Code
+code --install-extension nhoizey.gremlins
+
 # Extension: markdownlint
 code --install-extension DavidAnson.vscode-markdownlint
 
