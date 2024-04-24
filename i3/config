@@ -191,14 +191,14 @@ set $ws8 "8"
 set $ws9 "9"
 
 # Bind apps to specific workspaces
-assign [class="^Xfce4-terminal$"]   $ws1
-assign [class="^firefox$"]          $ws2
-assign [class="^Thunar$"]           $ws3
-assign [class="^Xarchiver$"]        $ws3
-assign [class="^Code$"]             $ws4
-assign [class="^mpv$"]              $ws5
-assign [class="^Transmission-gtk$"] $ws6
-assign [window_type="normal"]       $ws7
+assign [class="^Xfce4-terminal$"]        $ws1
+assign [class="^org\.mozilla\.firefox$"] $ws2
+assign [class="^Thunar$"]                $ws3
+assign [class="^Xarchiver$"]             $ws3
+assign [class="^Code$"]                  $ws4
+assign [class="^mpv$"]                   $ws5
+assign [class="^transmission-gtk$"]      $ws6
+assign [window_type="normal"]            $ws7
 
 # Anything that opens should be focused on
 for_window [class="^.*$"] focus

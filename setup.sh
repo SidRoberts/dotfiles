@@ -2,8 +2,8 @@
 
 set -e
 
-if [[ "$(cat /etc/system-release)" != "Fedora release 39 (Thirty Nine)" ]] || [[ "${XDG_CURRENT_DESKTOP}" != "i3" ]]; then
-    echo "This script is only designed to work on Fedora i3 Spin 39. Now exiting."
+if [[ "$(cat /etc/system-release)" != "Fedora release 40 (Forty)" ]] || [[ "${XDG_CURRENT_DESKTOP}" != "i3" ]]; then
+    echo "This script is only designed to work on Fedora i3 Spin 40. Now exiting."
 
     exit 1
 fi
@@ -345,12 +345,6 @@ sudo dnf -y install nodejs nodejs-npm
 ##########
 
 sudo dnf -y install docker docker-compose
-
-sudo dnf -y install https://kojipkgs.fedoraproject.org/packages/containerd/1.6.19/1.fc39/x86_64/containerd-1.6.19-1.fc39.x86_64.rpm
-
-sudo dnf -y install 'dnf-command(versionlock)'
-
-sudo dnf versionlock containerd
 
 sudo usermod -aG docker ${USER}
 

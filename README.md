@@ -8,7 +8,7 @@ My collection of config and setup files for my Linux system.
 
 ## How to run
 
-Install the OS using the [Fedora i3 Spin 39](https://fedoraproject.org/spins/i3/) ISO image.
+Install the OS using the [Fedora i3 Spin 40](https://fedoraproject.org/spins/i3/) ISO image.
 Then run:
 
 ```bash
