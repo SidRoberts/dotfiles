@@ -22,3 +22,6 @@
     count    = shortlog --summary --numbered
     remotes  = remote --verbose
     tags     = tag -l
+
+[push]
+	autoSetupRemote = true
