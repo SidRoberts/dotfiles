@@ -95,7 +95,7 @@ Now, check out the `ToDoList.md` file in the home directory.
 
 ## License
 
-[![License](https://img.shields.io/github/license/SidRoberts/dotfiles?style=for-the-badge)](LICENSE.md)
+[![License](https://img.shields.io/github/license/SidRoberts/dotfiles?style=for-the-badge)](LICENSE)
 
 This repository is released under the Unlicense license.
-See [LICENSE.md](LICENSE.md) for more details.
+See [LICENSE](LICENSE) for more details.
