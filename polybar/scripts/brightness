@@ -2,6 +2,7 @@
 
 import vm_detect
 import subprocess
+import os.path
 
 vm_detect.exit_if_vm()
 
@@ -11,6 +12,10 @@ fontawesome = {
 
 def file_get_contents(path):
     return subprocess.check_output(['cat', path], universal_newlines=True)
+
+if not os.path.isfile('/sys/class/backlight/acpi_video0/brightness'):
+    print('')
+    exit(0)
 
 brightness = file_get_contents('/sys/class/backlight/acpi_video0/brightness')
 

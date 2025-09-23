@@ -2,8 +2,8 @@
 
 set -e
 
-if [[ "$(cat /etc/system-release)" != "Fedora release 40 (Forty)" ]] || [[ "${XDG_CURRENT_DESKTOP}" != "i3" ]]; then
-    echo "This script is only designed to work on Fedora i3 Spin 40. Now exiting."
+if [[ "$(cat /etc/system-release)" != "Fedora release 42 (Adams)" ]] || [[ "${XDG_CURRENT_DESKTOP}" != "i3" ]]; then
+    echo "This script is only designed to work on Fedora i3 Spin 42. Now exiting."
 
     exit 1
 fi
@@ -140,6 +140,8 @@ cp ${SCRIPT_DIR}/thunar/thunar-volman.xml ~/.config/xfce4/xfconf/xfce-perchannel
 #############
 
 sudo dnf -y install xarchiver
+
+mkdir ~/.config/xarchiver/
 
 cp ${SCRIPT_DIR}/xarchiver/xarchiverrc ~/.config/xarchiver/xarchiverrc
 
@@ -442,10 +444,6 @@ cp ${SCRIPT_DIR}/git/gitconfig ~/.gitconfig
 # GitHub #
 ##########
 
-sudo dnf -y install 'dnf-command(config-manager)'
-
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-
 sudo dnf -y install gh
 
 
@@ -454,7 +452,8 @@ sudo dnf -y install gh
 # XP Pen tablet #
 #################
 
-wget "https://www.xp-pen.com/download/file.html?id=1948&pid=430&ext=rpm" -O /tmp/xp-pen.rpm
+# XP Pen 4.0.7-250117
+wget "https://www.xp-pen.com/download/file.html?id=3678&pid=430&ext=rpm" -O /tmp/xp-pen.rpm
 
 sudo dnf -y install /tmp/xp-pen.rpm
 
@@ -501,8 +500,8 @@ fi
 # VirtualBox guest utils #
 ##########################
 
-# Only install within a VM
-if [ -e /dev/vboxguest ]; then
+# Only install within a VM (this package doesn't exist for arm64)
+if [ -e /dev/vboxguest ] && [ "$(uname -m)" = "x86_64" ]; then
     sudo dnf -y install virtualbox-guest-additions
 fi
 
@@ -623,8 +622,6 @@ gsettings set org.gnome.meld vc-commit-margin 80
 # Misc #
 ########
 
-sudo dnf -y install polkit-gnome
-
 sudo dnf -y install acpi
 
 sudo dnf -y install tldr
@@ -665,7 +662,8 @@ sudo usermod -aG video ${USER}
 # Download Fedora torrent #
 ###########################
 
-wget https://torrent.fedoraproject.org/torrents/Fedora-i3-Live-x86_64-39.torrent -O ~/Downloads/Fedora-i3-Live-x86_64-39.torrent
+wget https://torrent.fedoraproject.org/torrents/Fedora-i3-Live-x86_64-42.torrent -O ~/Downloads/Fedora-i3-Live-x86_64-42.torrent
+wget https://torrent.fedoraproject.org/torrents/Fedora-i3-Live-aarch64-42.torrent -O ~/Downloads/Fedora-i3-Live-aarch64-42.torrent
 
 
 
