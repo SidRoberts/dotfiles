@@ -602,18 +602,6 @@ sudo npm install -g markdownlint-cli
 
 
 
-#######################################
-# Projecteur - for Logitech Spotlight #
-#######################################
-
-sudo dnf -y install https://github.com/jahnf/Projecteur/releases/download/v0.10/projecteur-0.10_fedora-38-x86_64.rpm
-
-mkdir ~/.config/Projecteur
-
-cp ${SCRIPT_DIR}/projecteur/Projecteur.conf ~/.config/Projecteur/Projecteur.conf
-
-
-
 ########
 # Meld #
 ########
