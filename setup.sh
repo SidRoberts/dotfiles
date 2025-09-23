@@ -450,14 +450,6 @@ sudo dnf -y install gh
 
 
 
-########
-# Zoom #
-########
-
-sudo dnf -y install https://zoom.us/client/5.16.6.382/zoom_x86_64.rpm
-
-
-
 #################
 # XP Pen tablet #
 #################

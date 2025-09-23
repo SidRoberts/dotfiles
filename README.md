@@ -45,7 +45,6 @@ Now, check out the `ToDoList.md` file in the home directory.
 - [Autotrash](https://github.com/bneijt/autotrash)
 - [Print to PDF support](https://www.cups-pdf.de/)
 - [OBS Studio](https://obsproject.com/)
-- [Zoom](https://zoom.us/)
 - [XP Pen tablet support](https://www.xp-pen.com/)
 - [VirtualBox / VirtualBox guest additions](https://www.virtualbox.org/)
 - [Git](https://git-scm.com/)
