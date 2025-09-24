@@ -16,7 +16,7 @@ fontawesome = {
     'plug':                   '\uf1e6', # 
 }
 
-battery = subprocess.check_output(['acpi', '-b'], universal_newlines=True)
+battery = subprocess.check_output(['acpi', '-b'], universal_newlines=True, stderr=subprocess.DEVNULL)
 
 if not battery:
     print(colors.error('BATTERY NOT FOUND'))
